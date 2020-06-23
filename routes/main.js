@@ -13,6 +13,8 @@ router.get('/', function (req, res) {
     });
 });
 
+router.get('/users', userController.getUsers);
+
 router.post('/upload-image', multerUpload.single('image'), userController.uploadImage);
 
 module.exports = router;
